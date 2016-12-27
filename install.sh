@@ -1,10 +1,13 @@
 #!/bin/bash
 
+# Init variables
+Version="3.2"
+
 # Import the public key used by the package management system
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
 
 # Add the MongoDB repository details
-echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
+echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/${Version} multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-${Version}.list
 
 # Update your local package index
 sudo apt-get update
