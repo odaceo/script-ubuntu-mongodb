@@ -15,13 +15,13 @@
 # limitations under the License.
 
 # Init variables
-Version="3.2"
+MONGODB_VERSION=${1:-'3.4'}
 
 # Import the public key used by the package management system
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
 
 # Add the MongoDB repository details
-echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/${Version} multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-${Version}.list
+echo "deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/${MONGODB_VERSION} multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-${MONGODB_VERSION}.list
 
 # Update your local package index
 sudo apt-get update
