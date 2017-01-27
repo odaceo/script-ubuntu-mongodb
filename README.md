@@ -1,4 +1,4 @@
-# Script | Ubuntu | MongoDB
+# Script :: Ubuntu :: MongoDB
 
 [![License](https://img.shields.io/github/license/odaceo/script-ubuntu-mongodb.svg)](LICENSE)
 
